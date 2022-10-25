@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var search = function (nums, target) {
+            var obj = {};
+            for (var i = 0; i < nums.length; i++) {
+                var position = nums[i];
+                if (obj[position]) {
+                    obj[position]++;
+                } else {
+                    obj[position] = 1;
+                }
+            }
+            if (target in obj) {
+                return obj[target];
+            }
+            else {
+                return 0;
+            }
+        };
+        console.log(search([5, 7, 7, 8, 8, 10], 8));
+    </script>
+</body>
+
+</html>
