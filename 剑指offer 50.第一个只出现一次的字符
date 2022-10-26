@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var firstUniqChar = function (s) {
+            var obj = {};
+            console.log(s.charAt(0));
+            for (var i = 0; i < s.length; i++) {
+                var position = s.charAt(i);
+                if (obj[position]) {
+                    obj[position]++;
+                }else{
+                    obj[position] = 1;
+                }
+            }
+            console.log(obj);
+            for (var k in obj) {
+                if (obj[k] == 1) {
+                    var numbel=k;
+                    break;
+                }else{
+                 continue;
+                };
+            }
+            if(numbel){
+                return numbel;
+            }
+            return ' ';
+        };
+               console.log(firstUniqChar('aas'));
+    </script>
+</body>
+
+</html>
